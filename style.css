@@ -396,9 +396,9 @@ button {
   background: linear-gradient(to right, #fa4b37, #df2771);
   color: white;
 }
-.cbox .det a:hover img {
+/* .cbox .det a:hover img {
   filter: brightness(100);
-}
+} */
 .cbox img {
   width: 20px;
   margin-right: 20px;
@@ -475,11 +475,11 @@ button {
   margin-left: 90px;
   align-self: center;
 }
-.btn-roshan:hover {
+.btn-sajid:hover {
   background: rgba(0, 255, 0, 0.7);
   color: #fff;
 }
-.btn-roshan2:hover {
+.btn-yakshita:hover {
   background: rgba(0, 0, 255, 0.5);
   color: #fff;
 }

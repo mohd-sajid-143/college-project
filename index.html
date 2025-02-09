@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" type="png" href="images/icon/favicon.png" />
+    <link rel="shortcut icon" type="png" href="images/icon/short_logo.png" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
     <title>SyEduTech</title>
@@ -18,13 +18,22 @@
           $("nav").removeClass("black");
         }
       });
+      function future_work() {
+        alert("This service is coming soon—stay tuned for the update!");
+        return false;
+      }
+      function loadLogIn() {
+        window.location.href = "login.html";
+      }
     </script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <header id="header">
       <nav>
-        <div class="logo"><img src="images/icon/web_logo.png" alt="logo" /></div>
+        <div class="logo">
+          <img src="images/icon/web_logo.png" alt="logo" />
+        </div>
         <ul>
           <li><a class="active" href="">Home</a></li>
           <li><a href="#portfolio_section">Courses </a></li>
@@ -59,15 +68,6 @@
             Educational methods include teaching, training, storytelling,
             discussion and directed research!
           </h5>
-          <div class="play">
-            <img src="images/icon/play.png" alt="play" /><span
-              ><a
-                href="https://www.youtube.com/watch?v=KFyrgDO1WXk"
-                target="_blank"
-                >Watch Now</a
-              ></span
-            >
-          </div>
         </div>
         <div class="svg-image">
           <img src="images/extra/svg1.jpg" alt="svg" />
@@ -94,54 +94,43 @@
 
     <!-- Some Popular Subjects -->
     <div class="title">
-      <span>Popular Subjects on LearnEd</span>
+      <span>Popular Subjects on SyEduTech</span>
     </div>
     <br /><br />
     <div class="subject-course">
       <center>
         <div class="cbox">
-          <div class="det">
+          <div class="det" onclick="loadLogIn()">
             <a href="#"
-              ><img src="images/icon/computer-network.png" />Computer Networks</a
+              ><img src="images/icon/computer-network.png" />Computer
+              Networks</a
             >
           </div>
-          <div class="det">
+          <div class="det" onclick="loadLogIn()">
             <a href="#"
               ><img src="images/icon/visual-computing.png" />Operating System</a
-            > 
-          </div>
-          <div class="det">
-            <a href="subjects/jee.html#sample_papers"
-              ><img src="images/icon/DSA.png" />Data Science and Analytics</a
             >
           </div>
-          <div class="det">
-            <a href="subjects/quiz.html"
-              ><img src="images/icon/SE.png" />Software Engineering</a
-            >
+          <div class="det" onclick="loadLogIn()">
+            <a href="#"><img src="images/icon/python.png" />Python</a>
+          </div>
+          <div class="det" onclick="loadLogIn()">
+            <a href="#"><img src="images/icon/SE.png" />Software Engineering</a>
           </div>
         </div>
       </center>
       <div class="cbox">
-        <div class="det">
-          <a href="#"
-            ><img src="images/icon/CC.png" />Cloud Computing</a
-          >
+        <div class="det" onclick="loadLogIn()">
+          <a href="#"><img src="images/icon/CC.png" />Cloud Computing</a>
         </div>
-        <div class="det">
-          <a href="subjects/computer_courses.html#data"
-            ><img src="images/icon/ads.png" />Data Structures</a
-          >
+        <div class="det" onclick="loadLogIn()">
+          <a href="#"><img src="images/icon/ads.png" />Data Structures</a>
         </div>
-        <div class="det">
-          <a href="subjects/computer_courses.html#algo"
-            ><img src="images/courses/algo.png" />Algorithm</a
-          >
+        <div class="det" onclick="loadLogIn()">
+          <a href="#"><img src="images/icon/java.png" />Java</a>
         </div>
-        <div class="det det-last">
-          <a href="#"
-            ><img src="images/icon/blockchain.png" />Blockchain</a
-          >
+        <div class="det det-last" onclick="loadLogIn()">
+          <a href="#"><img src="images/icon/blockchain.png" />Blockchain</a>
         </div>
       </div>
     </div>
@@ -194,35 +183,44 @@
       <div class="smbox">
         <span
           ><center>
-            <div class="data">
-              <img src="images/courses/mca-1-sem.png" alt="MCA 1 SEM" />
-            </div>
-            <div class="det">MCA 1 SEM</div>
+            <a href="login.html">
+              <div class="data">
+                <img src="images/courses/mca-1-sem.png" alt="MCA 1 SEM" />
+              </div>
+              <div class="det">MCA 1 SEM</div>
+            </a>
           </center></span
         >
         <span
           ><center>
-            <div class="data">
-              <img src="images/courses/mca-2-sem.png" alt="MCA 2 SEM" />
-            </div>
-            <div class="det">MCA 2 SEM</div>
+            <a href="login.html">
+              <div class="data">
+                <img src="images/courses/mca-2-sem.png" alt="MCA 2 SEM" />
+              </div>
+              <div class="det">MCA 2 SEM</div>
+            </a>
           </center></span
         >
-        <span
-          ><center>
-			<div class="data">
-				<img src="images/courses/mca-3-sem.png" alt="MCA 3 SEM" />
-			  </div>
-			  <div class="det">MCA 3 SEM</div>
+        <span>
+          <center>
+            <a href="login.html">
+              <div class="data">
+                <img src="images/courses/mca-3-sem.png" alt="MCA 3 SEM" />
+              </div>
+              <div class="det">MCA 3 SEM</div>
+            </a>
           </center></span
         >
-        <span
-          > <div class="data">
-			<img src="images/courses/mca-4-sem.png" alt="MCA 4 SEM" />
-		  </div>
-		  <div class="det">MCA 4 SEM</div>
-          </center></span
-        >
+        <span>
+          <center>
+            <a href="login.html">
+              <div class="data">
+                <img src="images/courses/mca-4-sem.png" alt="MCA 4 SEM" />
+              </div>
+              <div class="det">MCA 4 SEM</div>
+            </a>
+          </center>
+        </span>
       </div>
     </div>
     <div class="course">
@@ -252,7 +250,7 @@
               <a
                 href="https://www.linkedin.com/in/mohd-sajid-is4you/"
                 target="_blank"
-                ><button class="btn-roshan">Follow +</button></a
+                ><button class="btn-sajid">Follow +</button></a
               >
             </div>
           </center>
@@ -271,7 +269,7 @@
               <a
                 href="https://https://www.linkedin.com/in/mohd-sajid-is4you/"
                 target="_blank"
-                ><button class="btn-akhil">Follow +</button></a
+                ><button class="btn-yakshita">Follow +</button></a
               >
             </div>
           </center>
@@ -295,43 +293,43 @@
           </p>
         </center>
       </div>
-      <a href="#"
+      <a href="login.html"
         ><div class="s-card">
           <img src="images/icon/computer-courses.png" />
           <p>Organized Materials</p>
         </div></a
       >
-      <a href="#"
+      <a href="login.html"
         ><div class="s-card">
           <img src="images/icon/notes.png" />
           <p>Complete Notes</p>
         </div></a
       >
-      <a href="#"
+      <a href="login.html"
         ><div class="s-card">
           <img src="images/icon/online-tutorials.png" />
           <p>Online Video Lectures</p>
         </div></a
       >
-      <a href="#"
+      <a href="login.html"
         ><div class="s-card">
           <img src="images/icon/papers.jpg" />
           <p>Previous Year Papers</p>
         </div></a
       >
-      <a href="#"
+      <a href="#" onclick="return future_work()"
         ><div class="s-card">
           <img src="images/icon/p3.png" />
           <p>Performance and Ranking Report</p>
         </div></a
       >
-      <a href="#"
+      <a href="#" onclick="return future_work()"
         ><div class="s-card">
           <img src="images/icon/discussion.png" />
           <p>Discussion with Our Tutors & Mentors</p>
         </div></a
       >
-      <a href="#"
+      <a href="#" onclick="return future_work()"
         ><div class="s-card">
           <img src="images/icon/q1.png" />
           <p>Daily Brain Teasing Questions to Improve IQ</p>
@@ -560,7 +558,7 @@
     <footer>
       <div class="footer-container">
         <div class="left-col">
-          <img src="images/icon/logo - Copy.png" style="width: 200px" />
+          <img src="images/icon/web_logo.png" style="width: 200px" />
           <div class="logo"></div>
           <div class="social-media">
             <a href="#"><img src="images/icon\fb.png" /></a>
@@ -571,7 +569,7 @@
           </div>
           <br /><br />
           <p class="rights-text">
-            Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights
+            Copyright © 2025 Created By Mohd Sajid, Yakshita Soni All Rights
             Reserved.
           </p>
           <br />
