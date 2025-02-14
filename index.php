@@ -7,8 +7,9 @@
     <title>SyEduTech</title>
     <meta name="desciption" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css" />
+    <script type="text/javascript" src="JS/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
@@ -23,7 +24,7 @@
         return false;
       }
       function loadLogIn() {
-        window.location.href = "login.html";
+        window.location.href = "Pages/login.php";
       }
     </script>
   </head>
@@ -36,7 +37,7 @@
         </div>
         <ul>
           <li><a class="active" href="">Home</a></li>
-          <li><a href="#portfolio_section">Courses </a></li>
+          <li><a href="#course_section">Courses </a></li>
           <li><a href="#team_section">Team</a></li>
           <li><a href="#services_section">Services</a></li>
           <li><a href="#contactus_section">Contact</a></li>
@@ -48,7 +49,7 @@
             onclick="slide()"
           />
         </div>
-        <a class="get-started" href="login.html">Get Started</a>
+        <a class="get-started" href="Pages/login.php">Get Started</a>
         <img
           src="images/icon/menu.png"
           class="menu"
@@ -76,10 +77,6 @@
       <div class="side-menu" id="side-menu">
         <div class="close" onclick="sideMenu(1)">
           <img src="images/icon/close.png" alt="" />
-        </div>
-        <div class="user">
-          <img src="images/creator/roshan.jpeg" alt="Username" />
-          <p>roshank9419</p>
         </div>
         <ul>
           <li><a href="#about_section">About</a></li>
@@ -183,7 +180,7 @@
       <div class="smbox">
         <span
           ><center>
-            <a href="login.html">
+            <a href="Pages/login.php">
               <div class="data">
                 <img src="images/courses/mca-1-sem.png" alt="MCA 1 SEM" />
               </div>
@@ -193,7 +190,7 @@
         >
         <span
           ><center>
-            <a href="login.html">
+            <a href="Pages/login.php">
               <div class="data">
                 <img src="images/courses/mca-2-sem.png" alt="MCA 2 SEM" />
               </div>
@@ -203,7 +200,7 @@
         >
         <span>
           <center>
-            <a href="login.html">
+            <a href="Pages/login.php">
               <div class="data">
                 <img src="images/courses/mca-3-sem.png" alt="MCA 3 SEM" />
               </div>
@@ -213,7 +210,7 @@
         >
         <span>
           <center>
-            <a href="login.html">
+            <a href="Pages/login.php">
               <div class="data">
                 <img src="images/courses/mca-4-sem.png" alt="MCA 4 SEM" />
               </div>
@@ -224,7 +221,7 @@
       </div>
     </div>
     <div class="course">
-      <a href="login.html">View All Courses</a>
+      <a href="Pages/login.php">View All Courses</a>
       <img src="images/icon/right-arrow.png" alt="" />
     </div>
 
@@ -293,25 +290,25 @@
           </p>
         </center>
       </div>
-      <a href="login.html"
+      <a href="Pages/login.php"
         ><div class="s-card">
           <img src="images/icon/computer-courses.png" />
           <p>Organized Materials</p>
         </div></a
       >
-      <a href="login.html"
+      <a href="Pages/login.php"
         ><div class="s-card">
           <img src="images/icon/notes.png" />
           <p>Complete Notes</p>
         </div></a
       >
-      <a href="login.html"
+      <a href="Pages/login.php"
         ><div class="s-card">
           <img src="images/icon/online-tutorials.png" />
           <p>Online Video Lectures</p>
         </div></a
       >
-      <a href="login.html"
+      <a href="Pages/login.php"
         ><div class="s-card">
           <img src="images/icon/papers.jpg" />
           <p>Previous Year Papers</p>
@@ -561,11 +558,11 @@
           <img src="images/icon/web_logo.png" style="width: 200px" />
           <div class="logo"></div>
           <div class="social-media">
-            <a href="#"><img src="images/icon\fb.png" /></a>
-            <a href="#"><img src="images/icon\insta.png" /></a>
-            <a href="#"><img src="images/icon\tt.png" /></a>
-            <a href="#"><img src="images/icon\ytube.png" /></a>
-            <a href="#"><img src="images/icon\linkedin.png" /></a>
+            <a href="#"><img src="images/icon/fb.png" /></a>
+            <a href="#"><img src="images/icon/insta.png" /></a>
+            <a href="#"><img src="images/icon/tt.png" /></a>
+            <a href="#"><img src="images/icon/ytube.png" /></a>
+            <a href="#"><img src="images/icon/linkedin.png" /></a>
           </div>
           <br /><br />
           <p class="rights-text">

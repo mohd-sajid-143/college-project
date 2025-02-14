@@ -1,18 +1,30 @@
+<?php
+session_start();
+if($_SESSION['student_id']==""){
+  header("Location:../index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <link rel="shortcut icon" type="png" href="../images/icon/short_logo.png" />
     <title>Courses</title>
-    <link rel="stylesheet" type="text/css" href="subjects.css" />
-    <link rel="stylesheet" type="text/css" href="../footer.css" />
-    <script type="text/javascript" src="../script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/courses.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css" />
+    <script type="text/javascript" src="../JS/script.js"></script>
+    <script>
+      function futureUpdates(){
+        alert("this content added soon !");
+        return false;
+      }
+    </script>
   </head>
   <body>
     <!-- NAVIGATION -->
     <header>
       <div class="nav" id="nav">
         <div id="syedutech-logo">
-          <a href="../index.html"
+          <a href="../index.php"
             ><img src="../images/icon/web_logo.png" style="width: 100px"
           /></a>
         </div>
@@ -22,33 +34,33 @@
         <ul id="list-switch">
           <li>
             <a href="#mca_sem"
-              ><img src="../images/courses/d1.png" class="icon" />MCA</a
+              ><img src="../images/icon/d1.png" class="icon" />MCA</a
             >
           </li>
           <li>
             <a href="#cse_sem"
-              ><img src="../images/courses/paper.png" class="icon" />CSE</a
+              ><img src="../images/icon/paper.png" class="icon" />CSE</a
             >
           </li>
           <li>
             <a href="#it_sem"
-              ><img src="../images/courses/computer.png" class="icon" />IT</a
+              ><img src="../images/icon/computer.png" class="icon" />IT</a
             >
           </li>
           <li>
             <a href="#ai_ml_sem"
-              ><img src="../images/courses/data.png" class="icon" />AL/ML</a
+              ><img src="../images/icon/data.png" class="icon" />AL/ML</a
             >
           </li>
           <li>
             <a href="#civil_sem"
-              ><img src="../images/courses/algo.png" class="icon" />Civil</a
+              ><img src="../images/icon/algo.png" class="icon" />Civil</a
             >
           </li>
           <li>
             <a href="#electrical_sem"
               ><img
-                src="../images/courses/projects.png"
+                src="../images/icon/projects.png"
                 class="icon"
               />Electrical</a
             >
@@ -56,7 +68,7 @@
           <li>
             <a href="#mechanical_sem"
               ><img
-                src="../images/courses/projects.png"
+                src="../images/icon/projects.png"
                 class="icon"
               />Mechanical</a
             >
@@ -64,7 +76,7 @@
           <li>
             <a href="#petroleum_sem"
               ><img
-                src="../images/courses/projects.png"
+                src="../images/icon/projects.png"
                 class="icon"
               />Petroleum</a
             >
@@ -282,7 +294,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -291,7 +303,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -300,7 +312,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -309,7 +321,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -319,7 +331,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -328,7 +340,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -337,7 +349,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -346,7 +358,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/CSE-poster.png" />
@@ -369,7 +381,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -378,7 +390,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -387,7 +399,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -396,7 +408,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -406,7 +418,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -415,7 +427,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -424,7 +436,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -433,7 +445,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/IT-poster.png" />
@@ -456,7 +468,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -465,7 +477,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -474,7 +486,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -483,7 +495,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -493,7 +505,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -502,7 +514,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -511,7 +523,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -520,7 +532,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/AI_ML-poster.png" />
@@ -543,7 +555,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -552,7 +564,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -561,7 +573,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -570,7 +582,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -580,7 +592,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -589,7 +601,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -598,7 +610,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -607,7 +619,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/civil-poster.png" />
@@ -630,7 +642,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -639,7 +651,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -648,7 +660,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -657,7 +669,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -667,7 +679,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -676,7 +688,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -685,7 +697,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -694,7 +706,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/Electrical-poster.png" />
@@ -718,7 +730,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -727,7 +739,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -736,7 +748,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -745,7 +757,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -755,7 +767,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -764,7 +776,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -773,7 +785,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -782,7 +794,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/Mechanical-Poster.png" />
@@ -804,7 +816,7 @@
     </div>
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">1/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -813,7 +825,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">2/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -822,7 +834,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">3/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -831,7 +843,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">4/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -841,7 +853,7 @@
           </div>
         </div>
 
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">5/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -850,7 +862,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">6/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -859,7 +871,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">7/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
@@ -868,7 +880,7 @@
             </div>
           </div>
         </div>
-        <div class="dcard2">
+        <div class="dcard2" onclick="return futureUpdates()">
           <span class="tag">8/8</span>
           <div class="fpart2">
             <img src="../images/courses/Petroleum-Poster.png" />
