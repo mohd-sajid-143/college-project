@@ -17,6 +17,9 @@ if($_SESSION['student_id']==""){
         alert("this content added soon !");
         return false;
       }
+      function loadSubject(){
+        window.location.href = "subjects.php";
+      }
     </script>
   </head>
   <body>
@@ -243,7 +246,7 @@ if($_SESSION['student_id']==""){
 
     <center>
       <div class="ccardbox2">
-        <div class="dcard2">
+        <div class="dcard2" onclick="loadSubject()">
           <span class="tag">1/4</span>
           <div class="fpart2">
             <img src="../images/courses/MCA-poster.png" />

@@ -1,8 +1,8 @@
 <?php
-// session_start();
-// if($_SESSION['student_id']==""){
-//   header("Location:../index.php");
-// }
+session_start();
+if($_SESSION['student_id']==""){
+  header("Location:../index.php");
+}
 ?> 
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,15 @@
         alert("this content added soon !");
         return false;
       }
+      function loadContentPage(){
+        window.location.href = "contents.php";
+      }
     </script>
+    <style>
+        #it{
+            cursor: pointer;
+        }
+    </style>
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -54,19 +62,19 @@
     <div class="course">
       <div class="cbox">
         <div class="det">
-          <a href="#" target="_blank">Internet Technology</a>
+          <a href="#it" target="_blank">Internet Technology</a>
         </div>
         <div class="det">
-          <a href="#" target="_blank">Advanced Data Structures</a>
+          <a href="#ads" target="_blank">Advanced Data Structures</a>
         </div>
         <div class="det">
-          <a href="#" target="_blank">Advanced Java</a>
+          <a href="#java" target="_blank">Advanced Java</a>
         </div>
         <div class="det">
-          <a href="#" target="_blank">Visual Computing</a>
+          <a href="#vc" target="_blank">Visual Computing</a>
         </div>
         <div class="det">
-          <a href="#" target="_blank">Python</a>
+          <a href="#python" target="_blank">Python</a>
         </div>
       </div>
     </div>
@@ -77,49 +85,49 @@
     <div class="ccard">
       <center>
         <div class="ccardbox">
-          <div class="dcard">
+          <div class="dcard" onclick="loadContentPage()" id="it">
             <div class="fpart">
-              <img src="../images/courses/MCA-poster.png" />
+              <img src="../images/courses/it.jpg" />
             </div>
-            <a href="#mca_sem"
+            <a href="#"
               ><div class="spart">
-                MCA <img src="../images/icon/dropdown.png" /></div
+                IT <img src="../images/icon/dropdown.png" /></div
             ></a>
           </div>
-          <div class="dcard">
+          <div class="dcard" onclick="loadContentPage()" id="ads">
             <div class="fpart">
-              <img src="../images/courses/civil-poster.png" />
+              <img src="../images/courses/ads.png" />
             </div>
-            <a href="#civil_sem"
+            <a href="#"
               ><div class="spart">
-                Civil <img src="../images/icon/dropdown.png" /></div
+                ADS <img src="../images/icon/dropdown.png" /></div
             ></a>
           </div>
-          <div class="dcard">
+          <div class="dcard" id="java">
             <div class="fpart">
-              <img src="../images/courses/CSE-poster.png" />
+              <img src="../images/courses/java.png" />
             </div>
-            <a href="#cse_sem"
+            <a href="#"
               ><div class="spart">
-                CSE<img src="../images/icon/dropdown.png" /></div
+                java<img src="../images/icon/dropdown.png" /></div
             ></a>
           </div>
         </div>
         <div class="ccardbox">
-          <div class="dcard">
+          <div class="dcard" onclick="loadContentPage()" id="vc">
             <div class="fpart">
-              <img src="../images/icon/visual-computing.png" />
+              <img src="../images/courses/vc.jpg" />
             </div>
-            <a href="#electrical_sem"
+            <a href="#"
               ><div class="spart">
                 VC<img src="../images/icon/dropdown.png" /></div
             ></a>
           </div>
-          <div class="dcard">
+          <div class="dcard" id="python">
             <div class="fpart">
               <img src="../images/courses/python-course.png" />
             </div>
-            <a href="#python"
+            <a href="#"
               ><div class="spart">
                 Python <img src="../images/icon/dropdown.png" /></div
             ></a>
