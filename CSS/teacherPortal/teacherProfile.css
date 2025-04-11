@@ -1,0 +1,45 @@
+/* form {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.tea-form-fields {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+input[type="email"][readonly],
+input[type="password"][readonly],
+.department {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+a {
+}
+#teacher-profile a {
+  text-decoration: none;
+  color: crimson;
+}

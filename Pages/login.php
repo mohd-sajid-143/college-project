@@ -3,13 +3,13 @@
 include 'connects.php';
 if(isset($_POST['login'])){
   $email=$_POST['email'];
-  $password=$_POST['password'];
-  $sel="SELECT * FROM student WHERE email='$email' AND password='$password'";
+  $password=md5($_POST['password']);
+  $sel="SELECT email FROM student WHERE email='$email' AND password='$password'";
   $exe=mysqli_query($conn,$sel);
   $tot=mysqli_num_rows($exe);
   if($tot==1){
-    $fetchid=mysqli_fetch_assoc($exe);
-    $_SESSION['student_id']=$fetchid['student_id'];
+    $fetchemail=mysqli_fetch_assoc($exe);
+    $_SESSION['student_email']=$fetchemail['email'];
     header("Location:courses.php");
     
   }else{
@@ -94,14 +94,16 @@ if(isset($_POST['login'])){
           class="input-field"
           placeholder="Full Name"
           required="required"
-          name="name"
+          name="r-name"
+          id="r-name"
         />
         <input
           type="email"
           class="input-field"
           placeholder="Email Address"
           required="required"
-          name="email"
+          name="r-email"
+          id="r-email"
         />
         <input
           type="password"
@@ -109,7 +111,8 @@ if(isset($_POST['login'])){
           placeholder="Create Password"
           name="psame"
           required="required"
-          name="password"
+          name="r-password"
+          id="r-password"
         />
         <input
           type="password"
@@ -118,6 +121,7 @@ if(isset($_POST['login'])){
           name="psame"
           required="required"
           name="repass"
+          id="repass"
         />
         <input
           type="checkbox"
@@ -125,11 +129,57 @@ if(isset($_POST['login'])){
           id="chkAgree"
           onclick="goFurther()"
         />I agree to the Terms & Conditions
-        <button type="submit" id="btnSubmit" class="submit-btn reg-btn">
+        <button type="submit" id="btnSubmit" name="register" class="submit-btn reg-btn">
           Register
         </button>
       </form>
     </div>
     <script type="text/javascript" src="../JS/script.js"></script>
+    <script>
+      document
+  .getElementById("register")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+    // Basic validation
+    const email = document.getElementById("r-email").value.trim();
+    const name = document.getElementById("r-name").value.trim();
+    const password = document.getElementById("r-password").value.trim();
+    const repass = document.getElementById("repass").value.trim();
+    if(password.length<=6){
+      alert("password should be greater then 6");
+      return false;
+    }
+    if(password!=repass){
+      alert("password and confirm password shuold be same");
+      return false;
+    }
+    if (!email && !password) {
+      alert("Please fill out all fields.");
+      return false;
+    }
+    // Create Form Data
+    let formData = new FormData();
+    formData.append("email", email);
+    formData.append("password", password);
+    formData.append("name",name);
+    fetch("validateLogin.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        if(data.includes("success")){
+          window.location.href="courses.php";
+        }else{
+          alert(data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    return true;
+    });
+    </script>
   </body>
 </html>

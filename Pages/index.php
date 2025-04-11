@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" type="png" href="images/icon/short_logo.png" />
+    <link rel="shortcut icon" type="png" href="../images/icon/short_logo.png" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
     <title>SyEduTech</title>
     <meta name="desciption" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/footer.css" />
-    <script type="text/javascript" src="JS/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css" />
+    <script type="text/javascript" src="../JS/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
@@ -24,7 +24,7 @@
         return false;
       }
       function loadLogIn() {
-        window.location.href = "Pages/login.php";
+        window.location.href = "login.php";
       }
     </script>
   </head>
@@ -33,7 +33,7 @@
     <header id="header">
       <nav>
         <div class="logo">
-          <img src="images/icon/web_logo.png" alt="logo" />
+          <img src="../images/icon/web_logo.png" alt="logo" />
         </div>
         <ul>
           <li><a class="active" href="">Home</a></li>
@@ -42,16 +42,16 @@
           <li><a href="#services_section">Services</a></li>
           <li><a href="#contactus_section">Contact</a></li>
         </ul>
-        <div class="srch">
+        <!-- <div class="srch">
           <input type="text" class="search" placeholder="Search here..." /><img
-            src="images/icon/search.png"
+            src="../images/icon/search.png"
             alt="search"
             onclick="slide()"
           />
-        </div>
-        <a class="get-started" href="Pages/login.php">Get Started</a>
+        </div> -->
+        <a class="get-started" href="login.php">Get Started</a>
         <img
-          src="images/icon/menu.png"
+          src="../images/icon/menu.png"
           class="menu"
           onclick="sideMenu(0)"
           alt="menu"
@@ -71,12 +71,12 @@
           </h5>
         </div>
         <div class="svg-image">
-          <img src="images/extra/svg1.jpg" alt="svg" />
+          <img src="../images/extra/svg1.jpg" alt="svg" />
         </div>
       </div>
       <div class="side-menu" id="side-menu">
         <div class="close" onclick="sideMenu(1)">
-          <img src="images/icon/close.png" alt="" />
+          <img src="../images/icon/close.png" alt="" />
         </div>
         <ul>
           <li><a href="#about_section">About</a></li>
@@ -99,35 +99,35 @@
         <div class="cbox">
           <div class="det" onclick="loadLogIn()">
             <a href="#"
-              ><img src="images/icon/computer-network.png" />Computer
+              ><img src="../images/icon/computer-network.png" />Computer
               Networks</a
             >
           </div>
           <div class="det" onclick="loadLogIn()">
             <a href="#"
-              ><img src="images/icon/visual-computing.png" />Operating System</a
+              ><img src="../images/icon/visual-computing.png" />Operating System</a
             >
           </div>
           <div class="det" onclick="loadLogIn()">
-            <a href="#"><img src="images/icon/python.png" />Python</a>
+            <a href="#"><img src="../images/icon/python.png" />Python</a>
           </div>
           <div class="det" onclick="loadLogIn()">
-            <a href="#"><img src="images/icon/SE.png" />Software Engineering</a>
+            <a href="#"><img src="../images/icon/SE.png" />Software Engineering</a>
           </div>
         </div>
       </center>
       <div class="cbox">
         <div class="det" onclick="loadLogIn()">
-          <a href="#"><img src="images/icon/CC.png" />Cloud Computing</a>
+          <a href="#"><img src="../images/icon/CC.png" />Cloud Computing</a>
         </div>
         <div class="det" onclick="loadLogIn()">
-          <a href="#"><img src="images/icon/ads.png" />Data Structures</a>
+          <a href="#"><img src="../images/icon/ads.png" />Data Structures</a>
         </div>
         <div class="det" onclick="loadLogIn()">
-          <a href="#"><img src="images/icon/java.png" />Java</a>
+          <a href="#"><img src="../images/icon/java.png" />Java</a>
         </div>
         <div class="det det-last" onclick="loadLogIn()">
-          <a href="#"><img src="images/icon/blockchain.png" />Blockchain</a>
+          <a href="#"><img src="../images/icon/blockchain.png" />Blockchain</a>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@
       <center><p style="font-size: 50px; padding: 100px">About</p></center>
       <div class="about-content">
         <div class="side-image">
-          <img class="sideImage" src="images/extra/e3.jpg" />
+          <img class="sideImage" src="../images/extra/e3.jpg" />
         </div>
         <div class="side-text">
           <h2>What you think about us ?</h2>
@@ -158,7 +158,7 @@
       </div>
     </div>
 
-    <!-- PORTFOLIO -->
+    <!-- Courses -->
     <div class="diffSection" id="portfolio_section">
       <center>
         <p style="font-size: 50px; padding: 100px; padding-bottom: 40px">
@@ -180,9 +180,9 @@
       <div class="smbox">
         <span
           ><center>
-            <a href="Pages/login.php">
+            <a href="login.php">
               <div class="data">
-                <img src="images/courses/mca-1-sem.png" alt="MCA 1 SEM" />
+                <img src="../images/courses/mca-1-sem.png" alt="MCA 1 SEM" />
               </div>
               <div class="det">MCA 1 SEM</div>
             </a>
@@ -192,7 +192,7 @@
           ><center>
             <a href="Pages/login.php">
               <div class="data">
-                <img src="images/courses/mca-2-sem.png" alt="MCA 2 SEM" />
+                <img src="../images/courses/mca-2-sem.png" alt="MCA 2 SEM" />
               </div>
               <div class="det">MCA 2 SEM</div>
             </a>
@@ -202,7 +202,7 @@
           <center>
             <a href="Pages/login.php">
               <div class="data">
-                <img src="images/courses/mca-3-sem.png" alt="MCA 3 SEM" />
+                <img src="../images/courses/mca-3-sem.png" alt="MCA 3 SEM" />
               </div>
               <div class="det">MCA 3 SEM</div>
             </a>
@@ -212,7 +212,7 @@
           <center>
             <a href="Pages/login.php">
               <div class="data">
-                <img src="images/courses/mca-4-sem.png" alt="MCA 4 SEM" />
+                <img src="../images/courses/mca-4-sem.png" alt="MCA 4 SEM" />
               </div>
               <div class="det">MCA 4 SEM</div>
             </a>
@@ -222,7 +222,7 @@
     </div>
     <div class="course">
       <a href="Pages/login.php">View All Courses</a>
-      <img src="images/icon/right-arrow.png" alt="" />
+      <img src="../images/icon/right-arrow.png" alt="" />
     </div>
 
     <!-- TEAM -->
@@ -234,7 +234,7 @@
       </center>
       <div class="totalcard">
         <div class="card">
-          <center><img src="images/creator/profilephoto.jpg" /></center>
+          <center><img src="../images/creator/profilephoto.jpg" /></center>
           <center>
             <div class="card-title">Mohd Sajid</div>
             <div id="detail">
@@ -253,7 +253,7 @@
           </center>
         </div>
         <div class="card">
-          <center><img src="images/creator/yakshita.png" /></center>
+          <center><img src="../images/creator/yakshita.png" /></center>
           <center>
             <div class="card-title">Yakshita Soni</div>
             <div id="detail">
@@ -290,51 +290,51 @@
           </p>
         </center>
       </div>
-      <a href="Pages/login.php"
+      <a href="login.php"
         ><div class="s-card">
-          <img src="images/icon/computer-courses.png" />
+          <img src="../images/icon/computer-courses.png" />
           <p>Organized Materials</p>
         </div></a
       >
       <a href="Pages/login.php"
         ><div class="s-card">
-          <img src="images/icon/notes.png" />
+          <img src="../images/icon/notes.png" />
           <p>Complete Notes</p>
         </div></a
       >
       <a href="Pages/login.php"
         ><div class="s-card">
-          <img src="images/icon/online-tutorials.png" />
+          <img src="../images/icon/online-tutorials.png" />
           <p>Online Video Lectures</p>
         </div></a
       >
       <a href="Pages/login.php"
         ><div class="s-card">
-          <img src="images/icon/papers.jpg" />
+          <img src="../images/icon/papers.jpg" />
           <p>Previous Year Papers</p>
         </div></a
       >
       <a href="#" onclick="return future_work()"
         ><div class="s-card">
-          <img src="images/icon/p3.png" />
+          <img src="../images/icon/p3.png" />
           <p>Performance and Ranking Report</p>
         </div></a
       >
       <a href="#" onclick="return future_work()"
         ><div class="s-card">
-          <img src="images/icon/discussion.png" />
+          <img src="../images/icon/discussion.png" />
           <p>Discussion with Our Tutors & Mentors</p>
         </div></a
       >
       <a href="#" onclick="return future_work()"
         ><div class="s-card">
-          <img src="images/icon/q1.png" />
+          <img src="../images/icon/q1.png" />
           <p>Daily Brain Teasing Questions to Improve IQ</p>
         </div></a
       >
       <a href="#contactus_section"
         ><div class="s-card">
-          <img src="images/icon/help.png" />
+          <img src="../images/icon/help.png" />
           <p>24x7 Online Support</p>
         </div></a
       >
@@ -342,7 +342,7 @@
 
     <!-- Reviews by Students -->
     <div id="makeitfull">
-      <a href="#review_section"><img src="images/icon/makeitfull.png" /></a>
+      <a href="#review_section"><img src="../images/icon/makeitfull.png" /></a>
     </div>
     <div class="review">
       <div class="diffSection" id="review_section">
@@ -362,16 +362,16 @@
       <div class="rev-container">
         <div class="rev-card">
           <div class="identity">
-            <img src="images/creator/humanNotExist1.jpg" />
+            <img src="../images/creator/humanNotExist1.jpg" />
             <p>Sophie Daniel</p>
             <h6>CSE 3 SEM</h6>
-            <div class="rating">
+            <!-- <div class="rating">
               <img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" />
-            </div>
+            </div> -->
           </div>
           <div class="rev-cont">
             <p id="title">Review:</p>
@@ -385,16 +385,16 @@
         </div>
         <div class="rev-card">
           <div class="identity">
-            <img src="images/creator/humanNotExist2.jpg" />
+            <img src="../images/creator/humanNotExist2.jpg" />
             <p>Clayton Clair</p>
             <h6>AL/ML 2 SEM</h6>
-            <div class="rating">
+            <!-- <div class="rating">
               <img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" />
-            </div>
+            </div> -->
           </div>
           <div class="rev-cont">
             <p id="title">Review:</p>
@@ -408,16 +408,16 @@
         </div>
         <div class="rev-card">
           <div class="identity">
-            <img src="images/creator/humanNotExist3.jpg" />
+            <img src="../images/creator/humanNotExist3.jpg" />
             <p>Devyn Sethi</p>
             <h6>MCA 1 SEM</h6>
-            <div class="rating">
+            <!-- <div class="rating">
               <img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" />
-            </div>
+            </div> -->
           </div>
           <div class="rev-cont">
             <p id="title">Review:</p>
@@ -431,16 +431,16 @@
         </div>
         <div class="rev-card">
           <div class="identity">
-            <img src="images/creator/humanNotExist4.jpg" />
+            <img src="../images/creator/humanNotExist4.jpg" />
             <p>Rylee Phillips</p>
             <h6>MCA 3 SEM</h6>
-            <div class="rating">
+            <!-- <div class="rating">
               <img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" /><img
                 src="images/icon/star.png"
               /><img src="images/icon/star.png" />
-            </div>
+            </div> -->
           </div>
           <div class="rev-cont">
             <p id="title">Review:</p>
@@ -467,7 +467,7 @@
           >
             <label>First Name <span class="imp">*</span></label
             ><label style="margin-left: 185px"
-              >Last Name <span class="imp">*</span></label
+              >Last Name <span class="imp"></span></label
             ><br />
             <center>
               <input
@@ -550,48 +550,7 @@
         how to learn …and change.”
       </div></marquee
     >
-
     <!-- FOOTER -->
-    <footer>
-      <div class="footer-container">
-        <div class="left-col">
-          <img src="images/icon/web_logo.png" style="width: 200px" />
-          <div class="logo"></div>
-          <div class="social-media">
-            <a href="#"><img src="images/icon/fb.png" /></a>
-            <a href="#"><img src="images/icon/insta.png" /></a>
-            <a href="#"><img src="images/icon/tt.png" /></a>
-            <a href="#"><img src="images/icon/ytube.png" /></a>
-            <a href="#"><img src="images/icon/linkedin.png" /></a>
-          </div>
-          <br /><br />
-          <p class="rights-text">
-            Copyright © 2025 Created By Mohd Sajid, Yakshita Soni All Rights
-            Reserved.
-          </p>
-          <br />
-          <p>
-            <img src="images/icon/location.png" /> CSE Dept. MBM University
-            <br />Jodhpur,Rajasthan-342001
-          </p>
-          <br />
-          <p>
-            <img src="images/icon/phone.png" /> +91-8824434122<br /><img
-              src="images/icon/mail.png"
-            />&nbsp;syedutech143@gmail.com
-          </p>
-        </div>
-        <div class="right-col">
-          <h1 style="color: #fff">Our Newsletter</h1>
-          <div class="border"></div>
-          <br />
-          <p>Enter Your Email to get our News and updates.</p>
-          <form class="newsletter-form">
-            <input class="txtb" type="email" placeholder="Enter Your Email" />
-            <input class="btn" type="submit" value="Submit" />
-          </form>
-        </div>
-      </div>
-    </footer>
+    <?php include_once 'footer.php';?>
   </body>
 </html>

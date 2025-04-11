@@ -1,9 +1,22 @@
 <?php
-// error_reporting(0);
-session_start();
-// if($_SESSION['student_id']==""){
-//   header("Location:../index.php");
-// }
+include "connects.php";
+error_reporting(0);
+if($_SESSION['student_email']==""){
+  header("Location:index.php");
+}
+$temp="";
+if(isset($_GET['subject_id'])){
+  $temp=$_GET['subject_id'];
+}
+$video_sel="SELECT * FROM videos WHERE subject_id=$temp";
+$exe_video = mysqli_query($conn, $video_sel);
+
+$notes_sel="SELECT * FROM notes WHERE subject_id=$temp";
+$exe_notes = mysqli_query($conn, $notes_sel);
+
+$pyq_sel="SELECT * FROM pyq WHERE subject_id=$temp";
+$exe_pyq = mysqli_query($conn, $pyq_sel);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +25,8 @@ session_start();
     <title>Contents</title>
     <!-- <link rel="stylesheet" type="text/css" href="../CSS/style.css" /> -->
     <link rel="stylesheet" type="text/css" href="../CSS/courses.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
     <!-- It will redirect to the Home Page after submitting the form -->
   </head>
@@ -28,13 +42,13 @@ session_start();
         <div class="switch-tab" id="switch-tab" onclick="switchTAB()">
           <img src="../images/icon/menu.png" />
         </div>
-        <div class="search" id="search-switch">
+        <!-- <div class="search" id="search-switch">
           <input type="text" placeholder="Search" class="srch" /><button
             id="srchbtn"
           >
             <img src="../images/icon/search.png" />
           </button>
-        </div>
+        </div> -->
       </div>
     </header>
     <!-- Vidoe Section -->
@@ -45,7 +59,28 @@ session_start();
       </div>
     </div>
     <div class="sample">
-      <h2>Added Soon.....</h2>
+      <?php
+      if(mysqli_num_rows($exe_video)<1){
+        echo "<h2>Video Tutorials is not added yet ..</h2>";
+      }else{
+        while($video_row=mysqli_fetch_assoc($exe_video)){
+        echo "<div class='dcard2 '>
+            <div class='fpart2'>
+              <iframe 
+                width='100%' 
+                height='100%' 
+                src='{$video_row["video_url"]}' 
+                title='{$video_row["video_name"]}' 
+                frameborder='0' 
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
+                allowfullscreen>
+              </iframe>
+            </div>
+    </div>";
+        }
+      }
+      ?>
+      
     </div>
     <br><br><br>
     <div class="title2" id="sample_papers">
@@ -58,7 +93,20 @@ session_start();
     <!-- Notes Section -->
     <div class="sample">
       <ul>
-        <li>
+        <?php
+        if(mysqli_num_rows($exe_notes)<1){
+          echo "<h2>Notes not added yet..</h2>";
+        }else{
+          while($notes_row=mysqli_fetch_assoc($exe_notes)){
+            echo "<li>
+          <a href='../Notes/{$notes_row["notes_url"]}' target='_blank'
+            >{$notes_row["notes_name"]}</a
+          >
+        </li>";
+        }
+      }
+        ?>
+        <!-- <li>
           <a href="../Notes/MCA-VC.pdf" target="_blank"
             >Unit 1</a
           >
@@ -84,7 +132,7 @@ session_start();
           <a href="../samplePapers/p1.pdf" target="_blank"
             >Unit 5</a
           >
-        </li>
+        </li> -->
       </ul>
     </div>
     <!-- Previous Year Papers -->
@@ -96,7 +144,24 @@ session_start();
     </div>
 
     <div class="sample">
-      <ul>
+    <ul>
+    <?php
+        if(mysqli_num_rows($exe_pyq)<1){
+          echo "<h2>Notes not added yet..</h2>";
+        }else{
+          while($pyq_row=mysqli_fetch_assoc($exe_pyq)){
+            echo "<li>
+          <a href='../PYQ/{$pyq_row["pyq_url"]}' target='_blank'
+            >{$pyq_row["pyq_name"]}</a
+          >
+        </li>"; 
+        }
+      }
+        ?>
+        </ul>
+        </div>
+        <br><br><br>
+      <!-- <ul>
         <li>
           <a href="../samplePapers/p1.pdf" target="_blank"
             >Previous Question Papers 2018</a
@@ -142,9 +207,9 @@ session_start();
           >
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- FOOTER -->
-    <footer>
+    <!-- <footer>
       <div class="footer-container">
         <div class="left-col">
           <img src="../images/icon/web_logo.png" style="width: 200px" />
@@ -184,7 +249,8 @@ session_start();
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <?php include 'footer.php';?>
     <script type="text/javascript" src="../JS/script.js"></script>
   </body>
 </html>
